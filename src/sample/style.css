@@ -1,0 +1,20 @@
+#cross:hover{
+    -fx-background-color: red;
+}
+#la:hover {
+    -fx-background-color: gray;
+}
+
+#pButton:hover {
+    -fx-border-color: white;
+    /*-fx-border-radius: 2px;*/
+}
+
+.importFile:hover {
+
+     -fx-background-radius: 20px;
+     -fx-border-color: white;
+     -fx-border-radius: 20px;
+
+
+ }
