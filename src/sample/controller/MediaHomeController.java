@@ -531,6 +531,7 @@ public class MediaHomeController {
                     });
                 }
             });
+            volumeSlider.setValue(player.getMp().getVolume() * 100);
 
            mp=player;
 
