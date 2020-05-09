@@ -317,7 +317,6 @@ public class MediaHomeController {
             if(mp.getMp().getStatus().equals(MediaPlayer.Status.READY) || mp.getMp().getStatus().equals(MediaPlayer.Status.PAUSED) || mp.getMp().getStatus().equals(MediaPlayer.Status.STOPPED)){
                 mp.getMp().play();
                 fadeOut.getFadeTransition();
-                playButton.getScene().setCursor(Cursor.NONE);
 
 
                 FontAwesomeIconView pauseIcon=new FontAwesomeIconView(FontAwesomeIcon.PAUSE);
@@ -329,7 +328,6 @@ public class MediaHomeController {
             }
             else if(mp.getMp().getStatus().equals(MediaPlayer.Status.PLAYING)){
                 mp.getMp().pause();
-                playButton.getScene().setCursor(Cursor.DEFAULT);
 
                 fadeOut.getStopFadeTransition();
                 playingtoolPane.setVisible(true);
@@ -428,7 +426,6 @@ public class MediaHomeController {
                         playingtoolPane.setVisible(true);
                         playingtoolPane.setOpacity(1.0);
 
-                        playButton.getScene().setCursor(Cursor.DEFAULT);
 
                         PauseTransition pauseTransition=new PauseTransition(Duration.seconds(1));
                         pauseTransition.play();
@@ -437,14 +434,8 @@ public class MediaHomeController {
                                fadeOut.getStopFadeTransition();
                                playingtoolPane.setVisible(true);
                                playingtoolPane.setOpacity(1.0);
-                               playButton.getScene().setCursor(Cursor.DEFAULT);
                            }else {
                                fadeOut.getFadeTransition();
-                              PauseTransition p=new PauseTransition(Duration.seconds(1.8));
-                              p.play();
-                              p.setOnFinished(eee->{
-                                  playButton.getScene().setCursor(Cursor.NONE);
-                              });
                            }
                         });
                     }
